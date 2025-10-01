@@ -1,0 +1,14 @@
+---
+config:
+  theme: forest
+  layout: dagre
+---
+flowchart TB
+    n2["Filled Circle"] --> n1(["Idle"])
+    n1 --> n5(["Eligiendo cafe"])
+    n7(["Error"]) --> n8["Mensaje error"] & n1
+    n9(["haciendo cafe"]) --> n1
+    n5 --> n9 & n7
+    n1 --> n10(["Apagando"])
+    n2@{ shape: f-circ}
+    n8@{ shape: rect}
